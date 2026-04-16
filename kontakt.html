@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Kontakt</title>
+    <meta name="descripton" content="Lista zawierająca najlepsze zdaniem autora studia podyplomowe kryteria: plan, temat!"/>
+    <meta name="keywords" content="studia,uczelnia,podyplomowe,podyplomowe studia,studia podyplomowe" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+</head>
+<body>
+
+    
+
+    <div class="container">
+        <a href="index.html">
+        <img src="img/Home.png" height="75" class="to-home2" >
+    </a>
+    </div>
+    <p class="title">Kontakt</p>
+    <p class="subtitle">Dane kontaktowe. Można zgłaszać uczelnie i/lub studia posyplomowe.</p>
+
+    <!-- zrobić kartę z kontaktem zamiast stopki -->
+<!--   
+    <div class="tel">
+
+        <p>Tel: +48 531 784 840</p>
+    </div> -->
+    <!-- <div class="mail">
+
+        <p>E-mail: cwik.kuba7@gmail.com</p>
+    </div> -->
+
+
+    <p class="formularz"><br/>Formularz kontaktowy: </p>
+
+    <form name="kontaktowy" id="form">
+        <div class="formularz">
+            <p>Temat:</p>
+            <input class="formularz" type="text" name="temat" required placeholder="np. Zgłoszenie studiów">
+            <p>*</p>
+        </div>
+        <div class="formularz">
+            <p>Imię / Nazwa firmy:</p>
+            <input class="formularz" type="text" name="imie" required placeholder="Imię / Nazwa firmy">
+            <p>*</p>
+        </div>
+        <div class="formularz">
+            <p>Nazwisko / Filia firmy:</p>
+            <input class="formularz" type="text" name="nazwisko" placeholder="Nazwisko / filia firmy">
+        </div>
+        <div class="formularz">
+            <p>E-mail:</p>
+            <input class="formularz" type="email" name="email" required placeholder="np. twoj@email.com">
+            <p>*</p>
+        </div>
+        <div class="formularz">
+            <p>Tel:</p>
+            <input class="formularz" type="tel" name="tel" required pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="np. 123 456 789">
+        </div>
+        <div class="formularz">
+            <p>Wiadomość:</p>
+            <textarea class="formularz_p" name="post" rows="5" cols="40" placeholder="Wpisz wiadomość..." required></textarea>
+            <p>*</p> 
+        </div>
+        <diV class="formularz_s">
+            <button class="formularz_s" type="submit">Prześlij</button>
+        </div>
+    </form>
+
+<script>
+  document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    
+    var form = event.target;
+    // Znajdujemy przycisk wysyłania w formularzu
+    var przycisk = form.querySelector("button[type='submit']");
+    
+    // 1. NATYCHMIAST BLOKUJEMY PRZYCISK I ZMIENIAMY TEKST
+    przycisk.disabled = true;
+    przycisk.innerText = "Wysyłanie...";
+    
+    var formData = new FormData(form);
+    var googleScriptUrl = "https://script.google.com/macros/s/AKfycbz8jYWxddcZRb42Vrpe00-6B_YkT_2NyHkjU49l5polQC-TCn4qJOOMMkS2qJJ-RT1F/exec"; 
+
+    fetch(googleScriptUrl, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors"
+    })
+    .then(function() {
+      // 2. Formularz wysłany - robimy przekierowanie
+      window.location.href = "wyslano.html";
+    })
+
+    .catch(function(error) {
+      // 3. W RAZIE BŁĘDU (np. braku internetu) ODBLOKOWUJEMY PRZYCISK
+      alert("Wystąpił błąd podczas wysyłania.");
+      przycisk.disabled = false;
+      przycisk.innerText = "Prześlij";
+    });
+  });
+</script>
+        
+</body>
+</html>
