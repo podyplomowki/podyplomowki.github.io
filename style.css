@@ -39,15 +39,11 @@ a {
 }
 
 .title {
-
-  display: flex;
-  justify-content: center; /* poziome centrowanie */
-   /* pionowe centrowanie */
   color: #000000;
   font-size: 70px;
-  font-family:monospace ;
-  font-weight:780
-
+  font-family: monospace;
+  font-weight: 780;
+  margin: 0; /* WAŻNE: zapobiega przesunięciom */
 }
 
 .subtitle {
@@ -431,17 +427,15 @@ transform: scale(1.35);
 }
 
 .title-container {
-
   display: flex;
-  justify-content: left; /* poziome centrowanie */
-  align-items: left; /* pionowe centrowanie */
-  gap: 20px; /* odstęp między tekstem a obrazkiem */
-
+  justify-content: center; /* Idealne wyśrodkowanie tytułu w poziomie */
+  align-items: center; /* Wyśrodkowanie w pionie */
+  position: relative; /* WAŻNE: Pozwala na absolutne pozycjonowanie logo wewnątrz kontenera */
+  padding-top: 20px; /* Daje lekki odstęp od samej góry ekranu (możesz dostosować) */
 }
 
 .title-container-img {
-  
-  justify-content: left;
-  align-items: left;
-
+  position: absolute; /* "Odkleja" obrazek od tekstu */
+  left: 10px; /* Odległość od lewej krawędzi - dostosuj według uznania */
+  top: 10px; /* Odległość od górnej krawędzi - dostosuj według uznania */
 }
