@@ -38,7 +38,7 @@ a {
     
 }
 
-.title {
+.title-main {
   color: #000000;
   font-size: 70px;
   font-family: monospace;
@@ -55,8 +55,8 @@ a {
   color: rgb(0, 0, 0);
   font-size: 25px;
   font-family:monospace ;
-  font-weight:780
-
+  font-weight:780px;
+  margin-bottom: 0px;
 }
 
 .title_buttons {
@@ -190,6 +190,7 @@ a {
   font-family: monospace;
   font-size: 40px;
   color: rgb(0, 0, 0);
+  margin: 0px;
 }
 
 .formularz {
@@ -204,7 +205,7 @@ a {
   padding: 12px 24px;
   border-color: #ffffff;
   border-radius: 15px;
-
+  margin-bottom: 0px;
   cursor:text;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   gap: 15px;
@@ -438,4 +439,16 @@ transform: scale(1.35);
   position: absolute; /* "Odkleja" obrazek od tekstu */
   left: 10px; /* Odległość od lewej krawędzi - dostosuj według uznania */
   top: 10px; /* Odległość od górnej krawędzi - dostosuj według uznania */
+}
+
+.title {
+  color: #000000;
+  font-size: 70px;
+  font-family: monospace;
+  font-weight: 780;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 5px; /* WAŻNE: To usunie domyślne odstępy wokół tekstu */
+  margin-bottom: 50px; /* WAŻNE: To usunie domyślne odstępy wokół tekstu */
 }
