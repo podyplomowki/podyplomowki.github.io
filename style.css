@@ -1,7 +1,7 @@
 body {
    
-  background-color: #121212;
-  background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+  background-color: #f0f0f0;
+  background-image: radial-gradient(#bdbdbd 1px, transparent 1px);
   background-size: 20px 20px;
 
 }
@@ -22,7 +22,7 @@ a {
 
 .studia {
 
-  color: lightgrey;
+  color: rgb(0, 0, 0);
   font-size: 45px;
   font-family: monospace;
   font-weight: 560;
@@ -32,7 +32,7 @@ a {
 
 .uczelnia {
      
-  color: lightgrey;
+  color: rgb(0, 0, 0);
   font-size: 38px;
   font-family:monospace
     
@@ -43,7 +43,7 @@ a {
   display: flex;
   justify-content: center; /* poziome centrowanie */
    /* pionowe centrowanie */
-  color: lightgrey;
+  color: #000000;
   font-size: 70px;
   font-family:monospace ;
   font-weight:780
@@ -56,7 +56,7 @@ a {
   justify-content: center; /* poziome centrowanie */
    /* pionowe centrowanie */
   margin-top: -2%;
-  color: lightgrey;
+  color: rgb(0, 0, 0);
   font-size: 25px;
   font-family:monospace ;
   font-weight:780
@@ -76,7 +76,7 @@ a {
 .title_button {
 
   background: none;
-  color: rgba(255, 255, 255, 0.849);
+  color: rgba(0, 0, 0, 0.849);
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -96,7 +96,7 @@ a {
 
 .title_button:hover {
 
-  background-color: #2a2a2a;
+  background-color: #cacaca;
   font-weight: 500;
   transform: scale(1.03);
   box-shadow: 0 11px 15px rgba(0, 0, 0, 0.1);
@@ -106,7 +106,7 @@ a {
 .zapisz {
 
   background: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -118,7 +118,7 @@ a {
 
 .zapisz:hover {
 
-  background-color: #2a2a2a;
+  background-color: #cacaca;
   font-weight: 500;
   transform: scale(1.03);
   box-shadow: 0 11px 15px rgba(0, 0, 0, 0.1);
@@ -134,10 +134,11 @@ a {
 
 .logo:hover {
 
-  background-color: #ffffff;
+  background-color: #cacaca;
   border: none;
   border-radius: 7px;
   transform: scale(1.05);
+  box-shadow: 0 11px 15px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -182,18 +183,7 @@ a {
   margin-top: 5%;           /* musi mieć wysokość! */
   font-family: monospace;
   font-size: 60px;
-  color: white;
-}
-
-.tel {
-  display: flex;
-  justify-content: center;   /* poziomo */
-  align-items: center; 
-  margin-top: 10%;      /* pionowo */
-  height: 15px;             /* musi mieć wysokość! */
-  font-family: monospace;
-  font-size: 40px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .mail {
@@ -203,7 +193,7 @@ a {
   height: 200px;             /* musi mieć wysokość! */
   font-family: monospace;
   font-size: 40px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .formularz {
@@ -214,7 +204,7 @@ a {
   font-family: monospace;
   font-size: 32px;
   background: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 12px 24px;
   border-color: #ffffff;
   border-radius: 15px;
@@ -233,7 +223,7 @@ a {
   font-family: monospace;
   font-size: 32px;
   background: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 12px 24px;
   border-color: #ffffff;
   border-radius: 15px;
@@ -252,12 +242,11 @@ a {
   font-family: monospace;
   font-size: 32px;
   background: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 12px 24px;
-  border-color: #ff0000;
+  border-color: #ff5a5a;
   border-radius: 15px;
-
-  cursor:pointer;
+  cursor:text;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   gap: 15px;
 
@@ -273,7 +262,7 @@ a {
   background: none;
   color: rgb(255, 255, 255);
   padding: 12px 24px;
-  border-color: #ffffff;
+  border-color: #cacaca;
   border-radius: 15px;
   height: 150px;
   cursor:text;
@@ -438,5 +427,21 @@ transform: scale(1.35);
 .sent-img:hover {
 
 transform: scale(1.35);
+
+}
+
+.title-container {
+
+  display: flex;
+  justify-content: left; /* poziome centrowanie */
+  align-items: left; /* pionowe centrowanie */
+  gap: 20px; /* odstęp między tekstem a obrazkiem */
+
+}
+
+.title-container-img {
+  
+  justify-content: left;
+  align-items: left;
 
 }
