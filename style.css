@@ -83,7 +83,7 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   text-align: center;
   gap: 20px; /* odstęp między przyciskami */
@@ -92,10 +92,11 @@ a {
 
 .title_button:hover {
 
-  background-color: #cacaca;
+  background-color: #f1f1f1;
   font-weight: 500;
-  transform: scale(1.03);
-  box-shadow: 0 11px 15px rgba(0, 0, 0, 0.1);
+  /* transform: scale(0.80); */
+  transform: scale(1.25);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 
 }
 
